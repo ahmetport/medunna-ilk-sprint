@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="52.683">
+    <testcase classname="US06 TC02-03-04" name="_2" time="18.161">
+        <system-out>
+            <![CDATA[Given AP Kullanici medunna.com adresine gider...............................passed
+And AP Kullanici Account Menu ikonuna tiklar................................passed
+And AP Kullanici sign in secenegine tiklar..................................passed
+And AP Kullanici username kutusuna "PHYSICIAN51" girer......................passed
+And AP Kullanici Password kutusuna "Physician1234." girer...................passed
+And AP Kullanici sign in butonuna tiklar....................................passed
+And AP Kullanici sag ust kosede bulunan kullanici ismine tiklar.............passed
+And AP Kullanici settings secenigine tiklar.................................passed
+And AP kullanici firstname kutusuna yeni "Physician51" yazar................passed
+And AP kullanici lastname kutusuna yeni "PROJECT51" yazar...................passed
+And AP kullanici email kutusuna yeni "physician51@gmail.com" yazar..........passed
+And AP kullanici save butonuna basar ve degisiklikleri kaydeder.............passed
+Then AP kullanici uygulamayi kapatir........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US06 TC02-03-04" name="_3" time="17.304">
+        <system-out>
+            <![CDATA[Given AP Kullanici medunna.com adresine gider...............................passed
+And AP Kullanici Account Menu ikonuna tiklar................................passed
+And AP Kullanici sign in secenegine tiklar..................................passed
+And AP Kullanici username kutusuna "PATIENT51" girer........................passed
+And AP Kullanici Password kutusuna "Patient1234." girer.....................passed
+And AP Kullanici sign in butonuna tiklar....................................passed
+And AP Kullanici sag ust kosede bulunan kullanici ismine tiklar.............passed
+And AP Kullanici settings secenigine tiklar.................................passed
+And AP kullanici firstname kutusuna yeni "PATIENT" yazar....................passed
+And AP kullanici lastname kutusuna yeni "PROJECT" yazar.....................passed
+And AP kullanici email kutusuna yeni "patient51@gmail.com" yazar............passed
+And AP kullanici save butonuna basar ve degisiklikleri kaydeder.............passed
+Then AP kullanici uygulamayi kapatir........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US06 TC02-03-04" name="_4" time="17.052">
+        <system-out>
+            <![CDATA[Given AP Kullanici medunna.com adresine gider...............................passed
+And AP Kullanici Account Menu ikonuna tiklar................................passed
+And AP Kullanici sign in secenegine tiklar..................................passed
+And AP Kullanici username kutusuna "STAFF51" girer..........................passed
+And AP Kullanici Password kutusuna "Staff1234." girer.......................passed
+And AP Kullanici sign in butonuna tiklar....................................passed
+And AP Kullanici sag ust kosede bulunan kullanici ismine tiklar.............passed
+And AP Kullanici settings secenigine tiklar.................................passed
+And AP kullanici firstname kutusuna yeni "Staff" yazar......................passed
+And AP kullanici lastname kutusuna yeni "PROJECT" yazar.....................passed
+And AP kullanici email kutusuna yeni "staff51@gmail.com" yazar..............passed
+And AP kullanici save butonuna basar ve degisiklikleri kaydeder.............passed
+Then AP kullanici uygulamayi kapatir........................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
