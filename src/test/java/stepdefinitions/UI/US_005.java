@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.UI;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -6,8 +6,6 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import pages.MedunnaMainPage;
-import utilities.ConfigReader;
-import utilities.Driver;
 
 public class US_005 {
     MedunnaMainPage mainPage = new MedunnaMainPage();

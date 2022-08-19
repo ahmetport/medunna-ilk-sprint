@@ -1,5 +1,6 @@
 @test02
-Feature: US06 TC02-03-04
+Feature:
+  US06 TC02-03-04
 
   Scenario Outline:
     Given AP Kullanici medunna.com adresine gider
