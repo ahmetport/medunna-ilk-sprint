@@ -8,3 +8,7 @@ Feature: US_026 Contact Page Basarili mesaj gonderimi
     And Kullanici Contact Butonuna tiklar ve contact sayfasina yonlenirilir
     And Kullanici verilerini girer ve mesajini yazip gonder butonuna basar
     Then Kullanici mesajinin basarili bir sekilde gonderildiginin onaylamasini gorur
+
+
+
+
