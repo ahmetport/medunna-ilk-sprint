@@ -15,6 +15,7 @@ public class Authentication {
         String guncelToken = generateToken("DzKKaya","Sword1234.");
         System.out.println(guncelToken);
 
+
     }
 
 

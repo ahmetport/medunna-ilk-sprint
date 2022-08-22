@@ -2,7 +2,7 @@ Feature: US_026 Contact Page Basarili mesaj gonderimi
 
 
 
-  Scenario: kullanici bilgi almak için "Contact portal" üzerinden istek gönderebilmeli.
+  Scenario: kullanici bilgi almak için "Contact portal" uzerinden istek gonderebilmeli.
 
     Given AP Kullanici medunna.com adresine gider
     And Kullanici Contact Butonuna tiklar ve contact sayfasina yonlenirilir

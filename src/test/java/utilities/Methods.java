@@ -1,12 +1,10 @@
 package utilities;
 
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.Appointments;
 
-public class methods {
+public class Methods {
 
 
     static Appointments enter = new Appointments();

@@ -1,26 +1,16 @@
 @US017
 Feature: Test items(öğe) Oluştur / Güncelle / Sil
 
+  Background:
 
-
-  Scenario Outline:Kullanıcı admin olarak giriş yapar
-
-    Given AP Kullanici medunna.com adresine gider
-    And AP Kullanici Account Menu ikonuna tiklar
-    And AP Kullanici sign in secenegine tiklar
-    And AP Kullanici username kutusuna "<username>" girer
-    And AP Kullanici Password kutusuna "<password>" girer
-    And AP Kullanici sign in butonuna tiklar
-  Examples:
-  |username|password|
-  |DzKKaya|Sword1234.|
+    And  kullanici admin olarak giris yapar
+    And is items&title butonuna tiklar
+    And is test item linkine tiklar
 
   @TC001
   Scenario: Admin yeni test öğeleri oluşturabilir
 
-    Given is items&title butonuna tiklar
-    And is test item linkine tiklar
-    And is create a new item buttonuna tiklar
+    Given is create a new item buttonuna tiklar
     And is test olusturma ekraninda name box a isim girer
     And is description box a test aciklamasini girer
     And is test fiyat kutusuna ucreti girer
@@ -71,3 +61,5 @@ Feature: Test items(öğe) Oluştur / Güncelle / Sil
     And is ilk satirda gelen Ure testinin delete ikonuna tiklar
     And is acilan ekranda delete buttonuna tiklar
     Then is silinen ogeyi dogrular
+
+

@@ -39,8 +39,14 @@ public class US_26 {
     }
 }
 
-
-
+/*
+    @Then("user provides name")
+    public void user_provides_name() {
+        String name=faker.name().firstName()+"xtest";
+        cTestItem.setName(name);
+        Driver.waitAndSendText(us17AdminPage.nameTextBox,name);
+        //faker ile name oluşturma
+ */
 
 
 

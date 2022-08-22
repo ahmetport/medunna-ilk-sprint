@@ -2,45 +2,25 @@ package pojos;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = false)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class TestItem {
 
-    private String name;
-    private String description;
-    private int price;
-    private String defaultValMin;
     private String defaultValMax;
+    private String defaultValMin;
+    private String description;
+    private String name;
+    private int price;
 
-    public String getName() {
-        return name;
+
+    public TestItem() {
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public String getDefaultValMin() {
-        return defaultValMin;
-    }
-
-    public void setDefaultValMin(String defaultValMin) {
+    public TestItem(String defaultValMax, String defaultValMin, String description, String name, int price) {
+        this.defaultValMax = defaultValMax;
         this.defaultValMin = defaultValMin;
+        this.description = description;
+        this.name = name;
+        this.price = price;
     }
 
     public String getDefaultValMax() {
@@ -51,26 +31,47 @@ public class TestItem {
         this.defaultValMax = defaultValMax;
     }
 
-    public TestItem() {
+    public String getDefaultValMin() {
+        return defaultValMin;
     }
 
-    public TestItem(String name, String description, int price, String defaultValMin, String defaultValMax) {
-        this.name = name;
-        this.description = description;
-        this.price = price;
+    public void setDefaultValMin(String defaultValMin) {
         this.defaultValMin = defaultValMin;
-        this.defaultValMax = defaultValMax;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override
     public String toString() {
         return "TestItem{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", price=" + price +
+                "defaultValMax='" + defaultValMax + '\'' +
                 ", defaultValMin='" + defaultValMin + '\'' +
-                ", defaultValMax='" + defaultValMax + '\'' +
+                ", description='" + description + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
                 '}';
     }
-}
 
+}

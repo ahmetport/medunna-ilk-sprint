@@ -1,57 +1,136 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="52.683">
-    <testcase classname="US06 TC02-03-04" name="_2" time="18.161">
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="54.565">
+    <testcase classname="Test items(öğe) Oluştur / Güncelle / Sil" name="Admin yeni test öğeleri oluşturabilir" time="20.606">
         <system-out>
-            <![CDATA[Given AP Kullanici medunna.com adresine gider...............................passed
-And AP Kullanici Account Menu ikonuna tiklar................................passed
-And AP Kullanici sign in secenegine tiklar..................................passed
-And AP Kullanici username kutusuna "PHYSICIAN51" girer......................passed
-And AP Kullanici Password kutusuna "Physician1234." girer...................passed
-And AP Kullanici sign in butonuna tiklar....................................passed
-And AP Kullanici sag ust kosede bulunan kullanici ismine tiklar.............passed
-And AP Kullanici settings secenigine tiklar.................................passed
-And AP kullanici firstname kutusuna yeni "Physician51" yazar................passed
-And AP kullanici lastname kutusuna yeni "PROJECT51" yazar...................passed
-And AP kullanici email kutusuna yeni "physician51@gmail.com" yazar..........passed
-And AP kullanici save butonuna basar ve degisiklikleri kaydeder.............passed
-Then AP kullanici uygulamayi kapatir........................................passed
+            <![CDATA[Given kullanıcı medunnna ana sayfaya gider..................................passed
+Given kullanici admin olarak giris yapar....................................passed
+And is items&title butonuna tiklar..........................................passed
+And is test item linkine tiklar.............................................passed
+Given is create a new item buttonuna tiklar.................................passed
+And is test olusturma ekraninda name box a isim girer.......................passed
+And is description box a test aciklamasini girer............................passed
+And is test fiyat kutusuna ucreti girer.....................................passed
+And is testin min. deger boxina min degeri girer............................passed
+And is testin max. deger boxina max degeri girer............................passed
+And is save button a tiklar.................................................passed
+And is testlerin bulundugu tabloda created date buttonuna tiklar............passed
+Then ilk satirda Beyin testinin oldugunu dogrular...........................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="US06 TC02-03-04" name="_3" time="17.304">
+    <testcase classname="Test items(öğe) Oluştur / Güncelle / Sil" name="Admin, &quot;test items; Name, Description, price Default min value, Default max value ve" time="15.644">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name='username']&quot;}&#10;  (Session info: chrome=104.0.5112.102)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-B6CDBV3', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [d8a2b7b9e65db24462888564df724e91, findElement {using=xpath, value=//input[@name='username']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\gulsah\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64238}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64238/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: d8a2b7b9e65db24462888564df724e91" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given kullanıcı medunnna ana sayfaya gider..................................passed
+Given kullanici admin olarak giris yapar....................................failed
+And is items&title butonuna tiklar..........................................skipped
+And is test item linkine tiklar.............................................skipped
+Given is create a new item buttonuna tiklar.................................skipped
+And is test olusturma ekraninda name box a isim girer.......................skipped
+And is description box a test aciklamasini girer............................skipped
+And is test fiyat kutusuna ucreti girer.....................................skipped
+And is testin min. deger boxina min degeri girer............................skipped
+And is testin max. deger boxina max degeri girer............................skipped
+And is save button a tiklar.................................................skipped
+And is testlerin bulundugu tabloda created date buttonuna tiklar............skipped
+And is ilk satirda gelen Ure testinin edit buttonuna tiklar.................skipped
+And is test guncelleme ekraninda name box a guncellenecek isim girer........skipped
+And is description box a guncellenecek test aciklamasini girer..............skipped
+And is test fiyat kutusuna guncellenecek ucreti girer.......................skipped
+And is testin min. deger boxina guncellenecek min degeri girer..............skipped
+And is testin max. deger boxina guncellenecek max degeri girer..............skipped
+And is save button a tiklar.................................................skipped
+Then is ilk satirda gelen Ure_New testini dogrular..........................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='username']"}
+  (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-B6CDBV3', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d8a2b7b9e65db24462888564df724e91, findElement {using=xpath, value=//input[@name='username']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\gulsah\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64238}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64238/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d8a2b7b9e65db24462888564df724e91
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy25.click(Unknown Source)
+	at utilities.Methods.adminGiris(Methods.java:18)
+	at stepdefinitions.UI.MedunnaEnterStepDefinitions.kullanici_admin_olarak_giris_yapar(MedunnaEnterStepDefinitions.java:10)
+	at ✽.kullanici admin olarak giris yapar(file:///C:/Users/gulsah/Desktop/cucumberElifHoca/practiceCucumberProject-master/practiceCucumberProject-master/src/test/resources/features/us17_medunna.feature:27)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Test items(öğe) Oluştur / Güncelle / Sil" name="Admin test öğelerini görüntüleyebilir." time="2.312">
         <system-out>
-            <![CDATA[Given AP Kullanici medunna.com adresine gider...............................passed
-And AP Kullanici Account Menu ikonuna tiklar................................passed
-And AP Kullanici sign in secenegine tiklar..................................passed
-And AP Kullanici username kutusuna "PATIENT51" girer........................passed
-And AP Kullanici Password kutusuna "Patient1234." girer.....................passed
-And AP Kullanici sign in butonuna tiklar....................................passed
-And AP Kullanici sag ust kosede bulunan kullanici ismine tiklar.............passed
-And AP Kullanici settings secenigine tiklar.................................passed
-And AP kullanici firstname kutusuna yeni "PATIENT" yazar....................passed
-And AP kullanici lastname kutusuna yeni "PROJECT" yazar.....................passed
-And AP kullanici email kutusuna yeni "patient51@gmail.com" yazar............passed
-And AP kullanici save butonuna basar ve degisiklikleri kaydeder.............passed
-Then AP kullanici uygulamayi kapatir........................................passed
+            <![CDATA[Given is test ogelerinin goruntulenebildigini dogrular......................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="US06 TC02-03-04" name="_4" time="17.052">
-        <system-out>
-            <![CDATA[Given AP Kullanici medunna.com adresine gider...............................passed
-And AP Kullanici Account Menu ikonuna tiklar................................passed
-And AP Kullanici sign in secenegine tiklar..................................passed
-And AP Kullanici username kutusuna "STAFF51" girer..........................passed
-And AP Kullanici Password kutusuna "Staff1234." girer.......................passed
-And AP Kullanici sign in butonuna tiklar....................................passed
-And AP Kullanici sag ust kosede bulunan kullanici ismine tiklar.............passed
-And AP Kullanici settings secenigine tiklar.................................passed
-And AP kullanici firstname kutusuna yeni "Staff" yazar......................passed
-And AP kullanici lastname kutusuna yeni "PROJECT" yazar.....................passed
-And AP kullanici email kutusuna yeni "staff51@gmail.com" yazar..............passed
-And AP kullanici save butonuna basar ve degisiklikleri kaydeder.............passed
-Then AP kullanici uygulamayi kapatir........................................passed
+    <testcase classname="Test items(öğe) Oluştur / Güncelle / Sil" name="Admin test öğelerini silebilir." time="15.764">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name='username']&quot;}&#10;  (Session info: chrome=104.0.5112.102)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-B6CDBV3', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [d8a2b7b9e65db24462888564df724e91, findElement {using=xpath, value=//input[@name='username']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\gulsah\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64238}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64238/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: d8a2b7b9e65db24462888564df724e91" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given kullanıcı medunnna ana sayfaya gider..................................passed
+Given kullanici admin olarak giris yapar....................................failed
+And is items&title butonuna tiklar..........................................skipped
+And is test item linkine tiklar.............................................skipped
+Given is create a new item buttonuna tiklar.................................skipped
+And is test olusturma ekraninda name box a isim girer.......................skipped
+And is description box a test aciklamasini girer............................skipped
+And is test fiyat kutusuna ucreti girer.....................................skipped
+And is testin min. deger boxina min degeri girer............................skipped
+And is testin max. deger boxina max degeri girer............................skipped
+And is save button a tiklar.................................................skipped
+And is testlerin bulundugu tabloda created date buttonuna tiklar............skipped
+And is ilk satirda gelen Ure testinin delete ikonuna tiklar.................skipped
+And is acilan ekranda delete buttonuna tiklar...............................skipped
+Then is silinen ogeyi dogrular..............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='username']"}
+  (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-B6CDBV3', ip: '192.168.1.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d8a2b7b9e65db24462888564df724e91, findElement {using=xpath, value=//input[@name='username']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\gulsah\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64238}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64238/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d8a2b7b9e65db24462888564df724e91
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy25.click(Unknown Source)
+	at utilities.Methods.adminGiris(Methods.java:18)
+	at stepdefinitions.UI.MedunnaEnterStepDefinitions.kullanici_admin_olarak_giris_yapar(MedunnaEnterStepDefinitions.java:10)
+	at ✽.kullanici admin olarak giris yapar(file:///C:/Users/gulsah/Desktop/cucumberElifHoca/practiceCucumberProject-master/practiceCucumberProject-master/src/test/resources/features/us17_medunna.feature:55)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
