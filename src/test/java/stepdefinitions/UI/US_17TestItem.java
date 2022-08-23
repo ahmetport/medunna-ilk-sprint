@@ -136,7 +136,7 @@ public class US_17TestItem {
 
     @Then("is ilk satirda gelen Ure_New testini dogrular")
     public void isIlkSatirdaGelenUre_NewTestiniDogrular() {
-        Driver.wait(3);
+        Driver.wait(5);
         Assert.assertEquals(ConfigReader.getProperty("New_Test_Name"),testItem.NewTestItem.getText());
     }
 

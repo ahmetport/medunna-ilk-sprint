@@ -6,3 +6,9 @@ Feature:Test items(öğe) Oluştur / Güncelle / Sil
     And admin Status Code 200 oldugunu dogrular
     Then kullanici API kayitlarini onaylar
 
+
+  @TC006
+
+  Scenario:admin API ile items olusturur
+    And Api kullanarak yeni bir data olusturma "c-test-items" uzerinde post etme
+    And kullanici post request validition yapar

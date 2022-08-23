@@ -138,6 +138,21 @@ public class WriteToTxt {
         } catch (IOException e) {
         }
     }
+/*
+    public static void saveTestItemInfo(TestItem testItem) {
+        try {
+            FileWriter fileWriter = new FileWriter(ConfigReader.getProperty("created_testItem_records"), true);
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+            writer.append(testItem.getName() + "," + testItem.getDescription() + "," + testItem.getPrice() + "," +
+                    testItem.getDefaultValMin() + "," + testItem.getDefaultValMax() + "," + testItem.getCreatedDate() + "\n");
+
+            writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+ */
+        }
 
 
-}
