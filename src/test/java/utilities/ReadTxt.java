@@ -10,11 +10,11 @@ import java.util.List;
 public class ReadTxt {
 
 
-    public static List<String> getSSNIDs(){
-        List <String > list = new ArrayList<>();
+    public static List<String> getSSNIDs() {
+        List<String> list = new ArrayList<>();
 
 
-        try{
+        try {
 
             //identify file location
             FileReader fileReader = new FileReader(ConfigReader.getProperty("database_registrant_data"));
@@ -24,7 +24,7 @@ public class ReadTxt {
 
             String line = br.readLine();//856-45-6789,
 
-            while(line != null){
+            while (line != null) {
 
                 String ssn = line.split(",")[0];
                 list.add(ssn);
@@ -33,7 +33,7 @@ public class ReadTxt {
 
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
 
             e.printStackTrace();
 
@@ -43,13 +43,11 @@ public class ReadTxt {
     }
 
 
+    public static List<String> getAPISSNIDs() {
+        List<String> list = new ArrayList<>();
 
 
-    public static List<String> getAPISSNIDs(){
-        List <String > list = new ArrayList<>();
-
-
-        try{
+        try {
 
             //identify file location
             FileReader fileReader = new FileReader(ConfigReader.getProperty("api_all_registrant_data"));
@@ -59,7 +57,7 @@ public class ReadTxt {
 
             String line = br.readLine();//856-45-6789,
 
-            while(line != null){
+            while (line != null) {
 
                 String ssn = line.split(",")[2];
                 list.add(ssn);
@@ -68,7 +66,7 @@ public class ReadTxt {
 
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
 
             e.printStackTrace();
 
@@ -78,12 +76,11 @@ public class ReadTxt {
     }
 
 
+    public static List<Registrant> getAllRegistrants() {
+        List<Registrant> list = new ArrayList<>();
 
-    public static List<Registrant> getAllRegistrants(){
-        List <Registrant > list = new ArrayList<>();
 
-
-        try{
+        try {
 
             //identify file location
             FileReader fileReader = new FileReader(ConfigReader.getProperty("api_all_registrant_data"));
@@ -93,7 +90,7 @@ public class ReadTxt {
 
             String line = br.readLine();//856-45-6789,
 
-            while(line != null){
+            while (line != null) {
                 Registrant registrant = new Registrant();
 
 
@@ -101,21 +98,21 @@ public class ReadTxt {
                 registrant.setLastName(line.split(",")[1]);
                 registrant.setSsn(line.split(",")[2]);
                 registrant.setLogin(line.split(",")[3]);
-                if(line.split(",")[4] != null) {
-                    String  id = line.split(",")[4];
+                if (line.split(",")[4] != null) {
+                    String id = line.split(",")[4];
                     boolean flag = true;
-                    for(int i=0; i<id.length();i++){
-                        if(id.charAt(i) >= '0' && id.charAt(i) <= '9'){
+                    for (int i = 0; i < id.length(); i++) {
+                        if (id.charAt(i) >= '0' && id.charAt(i) <= '9') {
                             flag = true;
-                        }else{
+                        } else {
                             flag = false;
                             break;
                         }
                     }
-                    if(flag)
+                    if (flag)
                         registrant.setId(Integer.parseInt(line.split(",")[4]));
                 }
-                if(line.split(",")[5] != null)
+                if (line.split(",")[5] != null)
                     registrant.setEmail(line.split(",")[5]);
 
                 list.add(registrant);
@@ -124,7 +121,7 @@ public class ReadTxt {
 
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
 
             e.printStackTrace();
 
@@ -134,58 +131,91 @@ public class ReadTxt {
     }
 
 
-
-    public static List<Object> returnAccontIDsList(String filePath){
-        List<Object>all = new ArrayList<>();
-        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+    public static List<Object> returnAccontIDsList(String filePath) {
+        List<Object> all = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
             System.out.println(line);
             int i = 0;
             while (line != null) {
-               // Physician physician = new Physician();
-               // physician.setId(Integer.parseInt(line.split(",")[0]));
+                // Physician physician = new Physician();
+                // physician.setId(Integer.parseInt(line.split(",")[0]));
                 sb.append(System.lineSeparator());
                 line = br.readLine();
 
 //                System.out.println(i++);
 
-               // all.add(physician.getId());
+                // all.add(physician.getId());
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return all;
     }
 
 
-
-    public static List<String> returnAccontName(String filePath){
-        List<String>all = new ArrayList<>();
-        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+    public static List<String> returnAccontName(String filePath) {
+        List<String> all = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
             System.out.println(line);
             int i = 0;
             while (line != null) {
-               // Physician physician = new Physician();
-               // physician.setFirstName(line.split(",")[0]);
+                // Physician physician = new Physician();
+                // physician.setFirstName(line.split(",")[0]);
                 sb.append(System.lineSeparator());
                 line = br.readLine();
 
 //                System.out.println(i++);
 
-               // all.add(physician.getFirstName());
+                // all.add(physician.getFirstName());
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return all;
     }
 
 
+    public static List<String> getDBTestItemNames() {
+        List<String> list = new ArrayList<>();
+        try {
+            FileReader fileReader = new FileReader(ConfigReader.getProperty("DB_testItems_data"));
+            BufferedReader br = new BufferedReader(fileReader);
+            String line = br.readLine();
+            while (line != null) {
+                String name = line.split(",")[0];
+                list.add(name);
+                line = br.readLine();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
 
 
+    }
 
+    public static List<String> getTestItemNames() {
+        List<String> list = new ArrayList<>();
+        try {
+            //We are just identifying file location to read
+            FileReader fileReader = new FileReader(ConfigReader.getProperty("created_testItem_records"));
+            // we are reading the records of the file in given location here
+            BufferedReader br = new BufferedReader(fileReader);
+            String line = br.readLine();
+
+            while (line != null) {
+                String name = line.split(",")[0];
+                list.add(name);
+                line = br.readLine();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+
+    }
 }
-

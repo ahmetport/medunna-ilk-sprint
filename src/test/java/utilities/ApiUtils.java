@@ -3,7 +3,7 @@ package utilities;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojos.Registrant;
-import pojos.TestItem;
+import pojos.TestItem1;
 
 import static io.restassured.RestAssured.given;
 import static utilities.Authentication.generateToken;
@@ -40,7 +40,7 @@ public class ApiUtils {
         return response;
 
     }
-    public static Response postRequestTestItems(String endpoint, TestItem data) {
+    public static Response postRequestTestItems(String endpoint, TestItem1 data) {
         Response response = given().headers(
                         "Authorization",
                         "Bearer " + generateToken(ConfigReader.getProperty("adminUN"), ConfigReader.getProperty("adminPW")),

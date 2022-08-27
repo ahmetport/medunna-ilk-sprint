@@ -1,6 +1,7 @@
 package stepdefinitions.UI;
 
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,6 +21,7 @@ public class US_17TestItem {
 
     TestItemsPage testItem = new TestItemsPage();
     JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+    Faker faker=new Faker();
 
 
     @Given("is items&title butonuna tiklar")
@@ -45,6 +47,7 @@ public class US_17TestItem {
     @Given("is test olusturma ekraninda name box a isim girer")
     public void is_test_olusturma_ekraninda_name_box_a_isim_girer() {
         testItem.TextBoxName.sendKeys(ConfigReader.getProperty("Test_adi"));
+       // testItem.TextBoxName.sendKeys("Team_51" + faker.name().firstName());
 
     }
 

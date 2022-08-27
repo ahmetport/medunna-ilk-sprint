@@ -2,7 +2,7 @@ package utilities;
 
 import pojos.Appointment;
 import pojos.Registrant;
-import pojos.TestItem;
+import pojos.TestItem1;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -42,6 +42,25 @@ public class WriteToTxt {
 
             BufferedWriter writer = new BufferedWriter(fileWriter);
             writer.append(appointment + "\n");
+
+
+            writer.close();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void saveCitemsTestData(TestItem1 testItem) {
+
+        try {
+
+            //src/resources/testdata/cItemsTest.txt
+            FileWriter fileWriter = new FileWriter(ConfigReader.getProperty("api_all_cItemsTest_data"), true);
+
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+            writer.append(testItem + "\n");
 
 
             writer.close();
@@ -138,21 +157,22 @@ public class WriteToTxt {
         } catch (IOException e) {
         }
     }
-/*
-    public static void saveTestItemInfo(TestItem testItem) {
+    public static void saveDBTestItemsData(List<Object> testItems) {
         try {
-            FileWriter fileWriter = new FileWriter(ConfigReader.getProperty("created_testItem_records"), true);
+            //güncellenmiş veri eklemeyi false yapıyoruz
+            FileWriter fileWriter = new FileWriter(ConfigReader.getProperty("DB_testItems_data"), false);
             BufferedWriter writer = new BufferedWriter(fileWriter);
 
-            writer.append(testItem.getName() + "," + testItem.getDescription() + "," + testItem.getPrice() + "," +
-                    testItem.getDefaultValMin() + "," + testItem.getDefaultValMax() + "," + testItem.getCreatedDate() + "\n");
-
+            for (Object eachTestItem:testItems) {
+                writer.append(eachTestItem + ",\n");
+            }
             writer.close();
-
         } catch (Exception e) {
             e.printStackTrace();
-
- */
         }
+    }
+}
+
+
 
 

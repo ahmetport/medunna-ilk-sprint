@@ -3,7 +3,7 @@ package pojos;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class TestItem {
+public class TestItem1 {
 
     /*
     CTestItem{Jump to definition
@@ -25,7 +25,7 @@ public class TestItem {
         private String name;
         private int price;
 
-        public TestItem() {
+        public TestItem1() {
         }
 
 

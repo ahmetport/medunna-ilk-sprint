@@ -1,0 +1,5 @@
+CTestItem{, defaultValMax='42', defaultValMin='27', description='konya', name='Team51_Lucas', price='51'}
+CTestItem{, defaultValMax='42', defaultValMin='27', description='konya', name='Team51_Cherri', price='51'}
+CTestItem{, defaultValMax='42', defaultValMin='27', description='konya', name='Team51_Valda', price='51'}
+CTestItem{, defaultValMax='42', defaultValMin='27', description='konya', name='Team51_Walker', price='51'}
+CTestItem{, defaultValMax='42', defaultValMin='27', description='konya', name='Team51_Felix', price='51'}

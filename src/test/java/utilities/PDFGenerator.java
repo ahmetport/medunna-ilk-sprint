@@ -6,7 +6,7 @@ import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-import pojos.TestItem;
+import pojos.TestItem1;
 
 import java.io.FileOutputStream;
 import java.util.ArrayList;
@@ -76,7 +76,7 @@ public class PDFGenerator {
 
 
 
-    public static void pdfGeneratorRowsAndCellsWithList(String header, List <TestItem> list, String fileName){
+    public static void pdfGeneratorRowsAndCellsWithList(String header, List <TestItem1> list, String fileName){
 
         Document document = new Document();
         String pdf_path = fileName;

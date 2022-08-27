@@ -6,34 +6,24 @@ import com.google.gson.Gson;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import org.codehaus.jackson.JsonProcessingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Assert;
-import pojos.TestItem;
+import pojos.TestItem1;
 import utilities.*;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertEquals;
-import static utilities.ApiUtils.postRequestTestItems;
 import static utilities.Authentication.generateToken;
+import static utilities.WriteToTxt.saveCitemsTestData;
 //import static utilities.WriteToTxt.saveTestItemInfo;
 
 public class US17_Step extends MedunnaCıtemBaseUrl {
 
 
-    TestItem testItem = new TestItem();
+    TestItem1 testItem = new TestItem1();
     Response response;
     int NewPrice = 0;
 
@@ -61,7 +51,7 @@ public class US17_Step extends MedunnaCıtemBaseUrl {
         testItem.setPrice(NewPrice);
 
         ObjectMapper obj = new ObjectMapper();
-        TestItem actualTestItem = obj.readValue(response.asString(), TestItem.class);
+        TestItem1 actualTestItem = obj.readValue(response.asString(), TestItem1.class);
 
         System.out.println("actualTestItem = " + actualTestItem);
         System.out.println("expected data=" + testItem);
@@ -101,7 +91,7 @@ public class US17_Step extends MedunnaCıtemBaseUrl {
         //1 VALİDİTİON
 
         ObjectMapper obj = new ObjectMapper();
-        TestItem actualDataItem = obj.readValue(response.asString(), TestItem.class);
+        TestItem1 actualDataItem = obj.readValue(response.asString(), TestItem1.class);
 
         Assert.assertEquals(testItem.getDescription(), actualDataItem.getDescription());
         Assert.assertEquals(testItem.getDefaultValMin(), actualDataItem.getDefaultValMin());
@@ -111,15 +101,19 @@ public class US17_Step extends MedunnaCıtemBaseUrl {
 
         //2 VALİDİTİON
         Gson gson = new Gson();
-        TestItem actualDataItem1 = gson.fromJson(response.asString(), TestItem.class);
+        TestItem1 actualDataItem1 = gson.fromJson(response.asString(), TestItem1.class);
 
         Assert.assertEquals(testItem.getDescription(), actualDataItem1.getDescription());
         Assert.assertEquals(testItem.getDefaultValMin(), actualDataItem1.getDefaultValMin());
         Assert.assertEquals(testItem.getDefaultValMax(), actualDataItem1.getDefaultValMax());
         Assert.assertEquals(testItem.getPrice(), actualDataItem1.getPrice());
 
+        System.out.println(testItem.toString());
+        saveCitemsTestData(testItem);
+
 
     }
+
 }
 
 
